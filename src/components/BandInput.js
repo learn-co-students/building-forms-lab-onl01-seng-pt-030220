@@ -18,8 +18,6 @@ class BandInput extends Component {
  
   handleSubmit=(e)=>{
      e.preventDefault()
-     console.log(`this.state`,this.state)
-     //const newband= {...this.state,id: uuid()}
      this.props.addBand(this.state)
      this.setState({
 
