@@ -8,7 +8,9 @@ class BandInput extends Component {
   }
 
   onChange = event => {
-    this.setState({[event.target.name]: event.target.value})
+    this.setState({
+      name: event.target.value
+    });
   }
 
   onSubmit = event => {
@@ -21,13 +23,10 @@ class BandInput extends Component {
     console.log(this.state.name)
     return(
       <form onSubmit={this.onSubmit}>
-        <label>
-          Band Name:
-        </label>
-          <input type="text" name="name" value={this.state.name} onChange={this.onChange}/>
-       
-        <input type="submit" value="Submit" />
-      </form>
+    	    <label>Add Band</label>
+          <input type="text" onChange={this.onChange} value={this.state.name}/>
+          <input type="submit" />
+       </form>
     )
   }
 }
